@@ -4,7 +4,7 @@
 > **Ne restez pas bloqués bêtement, demander de l'aide**
 > Ne copier pas le code de votre voisin, ça se voit.
 
-Nom/Prénom: `.......`
+Nom/Prénom: Esparon Kyle
 
 Lien du codesandbox: `.......`
 
