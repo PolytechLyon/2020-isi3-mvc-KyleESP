@@ -1,12 +1,11 @@
 import "./style.css";
-import { initView, drawGame } from "./gameOfLife/view";
 import { Model } from "./gameOfLife/model";
+import { View } from "./gameOfLife/view";
 import { controller } from "./gameOfLife/controller.js";
 
-initView();
+const model = new Model();
 
-const model = new Model(drawGame);
+const view = new View(model);
+view.initView();
 
-model.init();
-drawGame(model);
 controller(model);

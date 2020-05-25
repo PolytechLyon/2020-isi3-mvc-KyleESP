@@ -6,11 +6,11 @@ import {
 } from "./constants";
 
 export class Model {
-  constructor(callBack) {
+  constructor() {
     this.width = GAME_SIZE;
     this.height = GAME_SIZE;
     this.raf = null;
-    this.callBack = callBack;
+    this.observers = [];
   }
 
   init() {
@@ -20,7 +20,7 @@ export class Model {
     DEFAULT_ALIVE_PAIRS.forEach(([x, y]) => {
       this.state[y][x] = CELL_STATES.ALIVE;
     });
-    this.updated();
+    this.notifyObservers();
   }
 
   run(date = new Date().getTime()) {
@@ -46,7 +46,7 @@ export class Model {
           }
         }
         this.state = stateTmp;
-        this.updated();
+        this.notifyObservers();
         this.run(currentTime);
       } else {
         this.run(date);
@@ -62,7 +62,6 @@ export class Model {
   reset() {
     this.stop();
     this.init();
-    this.updated();
   }
 
   isCellAlive(x, y) {
@@ -90,7 +89,14 @@ export class Model {
     return number;
   }
 
-  updated() {
-    this.callBack(this);
+  addObserver(observer) {
+    this.observers.push(observer);
+  }
+
+  notifyObservers() {
+    var self = this;
+    this.observers.forEach(function(observer) {
+      observer.update(self.state);
+    });
   }
 }
