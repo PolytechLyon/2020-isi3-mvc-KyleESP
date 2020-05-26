@@ -95,8 +95,8 @@ export class Model {
 
   notifyObservers() {
     var self = this;
-    this.observers.forEach(function(observer) {
-      observer.update(self.state);
+    this.observers.forEach(observer => {
+      observer.update(self);
     });
   }
 }

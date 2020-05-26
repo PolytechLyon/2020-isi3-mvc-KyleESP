@@ -22,8 +22,8 @@ export class View {
     this.canvas.setAttribute("width", GAME_SIZE * CELL_SIZE + GAME_SIZE - 1);
   }
 
-  update(state) {
-    state.forEach((row, rowIndex) => {
+  update(model) {
+    model.state.forEach((row, rowIndex) => {
       row.forEach((value, columnIndex) => {
         this.drawCell(rowIndex, columnIndex, value);
       });
