@@ -62,7 +62,7 @@ Dans ce diagramme de classes, j'ai décidé de représenter seulement les métho
 
 ![Diagramme de classe](img/class_diagram.png)
 
-Notre Model représente l'Observable qui est observé par notre View qui est l'Observer. La méthode addObserver(observer) permet justement à notre Model d'ajouter la View en tant qu'Observer. On pourrait ainsi ajouter facilement d'autres Observers implémentant la fonction update(), fonction appellée dans updated() afin de mettre à jour la vue avec le nouvel état du modèle.
+Notre Model représente l'Observable qui est observé par notre View qui est l'Observer. La méthode addObserver(observer) permet justement à notre Model d'ajouter la View en tant qu'Observer. On pourrait ainsi ajouter facilement d'autres Observers implémentant la fonction update(), fonction appelée dans updated() afin de mettre à jour la vue avec le nouvel état du modèle.
 
 ## Optionel
 
