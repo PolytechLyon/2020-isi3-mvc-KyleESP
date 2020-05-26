@@ -20,9 +20,17 @@ Il est inventé par [John Horton Conway](https://fr.wikipedia.org/wiki/John_Hort
 1. Expliquer le design pattern MVC à l'aide d'un schéma à insérer directement ici.
    Utiliser un outils commde Dia pour le représenter. Je veux **votre** schéma, pas un de ceux qu'on peut trouver sur le net.
 
+![Schéma MVC](images/schema_mvc.png)
+
+Le _modèle_ contient données et les méthodes permettant de les lire, les modifier et les enregistrer. Les données peuvent être brutes ou bien récupérées en base de données.
+La _vue_ représente l'affichage de l'interface graphique. Elle affiche les données récupérées depuis le modèle.
+Le _contrôleur_ joue le rôle d'intermédiaire entre le modèle et la vue : il demande les données au modèle, les traite et les renvoie à la vue qui les affiche.
+L'_utilisateur_ est celui qui va réaliser une action qui sera traitée par le contrôleur. Via les mécanismes du modèle MVC, il recevra en ensuite un résultat affiché par la vue.
+La _base de données_ contient les données gérées par la logique du modèle.
+
 2. Expliquer ce pattern à l'aide en complétant ce texte.
 
-Le pattern MVP, vise à découper le `modèle`, de la `vue` et du `contrôleur` afin de rendre le code plus `flexible, lisible, souple et reutilisable`.
+Le pattern MVP, vise à découper le `modèle`, de la `vue` et du `contrôleur` afin de rendre le code plus `flexible, lisible, souple et réutilisable`.
 Les responsabilités ne sont alors plus `unifiées`.
 On peut ainsi changer l'aspect visuel de sont application sans pour autant impacter le `modèle`.
 
@@ -43,7 +51,7 @@ En quoi cela relève du design pattern ObserverObservable.
 1. Expliquer votre implémentation:
 
 L'usage d'une callback permet ici de `notifier` afin dire à la _View_ de se redessiner.
-L'objet _Model_ n'a pas de lien avec `.......` pourtant grâce à la `callback` il peut notifier la `vue.`.
+L'objet _Model_ n'a pas de lien avec `la vue` pourtant grâce à la `callback` il peut notifier la `vue`.
 
 2. Insérer ici un UML montrant le pattern Observer-Observable liés aux objects de ce TP.
 
