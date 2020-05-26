@@ -22,7 +22,7 @@ Il est inventé par [John Horton Conway](https://fr.wikipedia.org/wiki/John_Hort
 
 ![Schéma MVC](img/schema_mvc.png)
 
-Le **modèle** contient données et les méthodes permettant de les lire, les modifier et les enregistrer. Les données peuvent être brutes ou bien récupérées en base de données.  
+Le **modèle** contient les données et les méthodes permettant de les lire, les modifier et les enregistrer. Les données peuvent être brutes ou bien récupérées en base de données.  
 La **vue** représente l'affichage de l'interface graphique. Elle affiche les données récupérées depuis le modèle.  
 Le **contrôleur** joue le rôle d'intermédiaire entre le modèle et la vue : il demande les données au modèle, les traite et les renvoie à la vue qui les affiche.  
 L'**utilisateur** est celui qui va réaliser une action qui sera traitée par le contrôleur. Via les mécanismes du modèle MVC, il recevra en ensuite un résultat affiché par la vue.  
@@ -30,7 +30,7 @@ La **base de données** contient les données gérées par la logique du modèle
 
 2. Expliquer ce pattern à l'aide en complétant ce texte.
 
-Le pattern MVP, vise à découper le `modèle`, de la `vue` et du `contrôleur` afin de rendre le code plus `flexible, lisible, souple et réutilisable`.
+Le pattern MVC, vise à découper le `modèle`, de la `vue` et du `contrôleur` afin de rendre le code plus `flexible, lisible, souple et réutilisable`.
 Les responsabilités ne sont alors plus `unifiées`.
 On peut ainsi changer l'aspect visuel de sont application sans pour autant impacter le `modèle`.
 
