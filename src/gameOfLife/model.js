@@ -20,7 +20,7 @@ export class Model {
     DEFAULT_ALIVE_PAIRS.forEach(([x, y]) => {
       this.state[y][x] = CELL_STATES.ALIVE;
     });
-    this.notifyObservers();
+    this.updated();
   }
 
   run(date = new Date().getTime()) {
@@ -46,7 +46,7 @@ export class Model {
           }
         }
         this.state = stateTmp;
-        this.notifyObservers();
+        this.updated();
         this.run(currentTime);
       } else {
         this.run(date);
@@ -93,7 +93,7 @@ export class Model {
     this.observers.push(observer);
   }
 
-  notifyObservers() {
+  updated() {
     var self = this;
     this.observers.forEach(observer => {
       observer.update(self);
