@@ -22,11 +22,11 @@ Il est inventé par [John Horton Conway](https://fr.wikipedia.org/wiki/John_Hort
 
 ![Schéma MVC](img/schema_mvc.png)
 
-Le _modèle_ contient données et les méthodes permettant de les lire, les modifier et les enregistrer. Les données peuvent être brutes ou bien récupérées en base de données.
-La _vue_ représente l'affichage de l'interface graphique. Elle affiche les données récupérées depuis le modèle.
-Le _contrôleur_ joue le rôle d'intermédiaire entre le modèle et la vue : il demande les données au modèle, les traite et les renvoie à la vue qui les affiche.
-L'_utilisateur_ est celui qui va réaliser une action qui sera traitée par le contrôleur. Via les mécanismes du modèle MVC, il recevra en ensuite un résultat affiché par la vue.
-La _base de données_ contient les données gérées par la logique du modèle.
+Le **modèle** contient données et les méthodes permettant de les lire, les modifier et les enregistrer. Les données peuvent être brutes ou bien récupérées en base de données.  
+La **vue** représente l'affichage de l'interface graphique. Elle affiche les données récupérées depuis le modèle.  
+Le **contrôleur** joue le rôle d'intermédiaire entre le modèle et la vue : il demande les données au modèle, les traite et les renvoie à la vue qui les affiche.  
+L'**utilisateur** est celui qui va réaliser une action qui sera traitée par le contrôleur. Via les mécanismes du modèle MVC, il recevra en ensuite un résultat affiché par la vue.  
+La **base de données** contient les données gérées par la logique du modèle.
 
 2. Expliquer ce pattern à l'aide en complétant ce texte.
 
