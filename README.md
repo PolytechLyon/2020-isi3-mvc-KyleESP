@@ -36,6 +36,9 @@ On peut ainsi changer l'aspect visuel de sont application sans pour autant impac
 
 3. Expliquer dans quels cas on doit privilégier le pattern MVC.
 
+- Quand le code est "lourd", afin de mieux le structurer et le rendre plus lisible. Le pattern MVC permet aussi de simplifier les opérations de maintenance et de mises à jour, en évitant que tout le code soit impacté quand on en modifie une partie.
+- Sur de gros projets impliquant plusieurs métiers, pour mieux répartir les tâches : le découpage MVC permet à un développeur de s’occuper des règles métiers complexes et à un designer de se focaliser sur le design avec HTML et CSS par exemple.
+
 ## A faire (obligatoire)
 
 - Render le jeu fonctionel tout en respectant le design pattern MVC.
@@ -54,6 +57,12 @@ L'usage d'une callback permet ici de `notifier` afin dire à la _View_ de se red
 L'objet _Model_ n'a pas de lien avec `la vue` pourtant grâce à la `callback` il peut notifier la `vue`.
 
 2. Insérer ici un UML montrant le pattern Observer-Observable liés aux objects de ce TP.
+
+Dans ce diagramme de classes, j'ai décidé de représenter seulement les méthodes et attributs qui ont été ajoutés ou déplacés pour respecter les design patterns MVC et Observer / Observable.
+
+![Diagramme de classe](img/class_diagram.png)
+
+Notre Model représente l'Observable qui est observé par notre View qui est l'Observer. La méthode addObserver(observer) permet justement à notre Model d'ajouter la View en tant qu'Observer. On pourrait ainsi ajouter facilement d'autres Observers implémentant la fonction update(), fonction appellée dans updated() afin de mettre à jour la vue avec le nouvel état du modèle.
 
 ## Optionel
 
