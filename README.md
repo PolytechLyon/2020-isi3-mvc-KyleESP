@@ -30,7 +30,7 @@ La **base de données** contient les données gérées par la logique du modèle
 
 2. Expliquer ce pattern à l'aide en complétant ce texte.
 
-Le pattern MVC, vise à découper le `modèle`, de la `vue` et du `contrôleur` afin de rendre le code plus `flexible, lisible, souple et réutilisable`.
+Le pattern MVP, vise à découper le `modèle`, de la `vue` et du `contrôleur` afin de rendre le code plus `flexible, lisible, souple et réutilisable`.
 Les responsabilités ne sont alors plus `unifiées`.
 On peut ainsi changer l'aspect visuel de sont application sans pour autant impacter le `modèle`.
 
