@@ -20,7 +20,7 @@ Il est inventé par [John Horton Conway](https://fr.wikipedia.org/wiki/John_Hort
 1. Expliquer le design pattern MVC à l'aide d'un schéma à insérer directement ici.
    Utiliser un outils commde Dia pour le représenter. Je veux **votre** schéma, pas un de ceux qu'on peut trouver sur le net.
 
-![Schéma MVC](images/schema_mvc.png)
+![Schéma MVC](img/schema_mvc.png)
 
 Le _modèle_ contient données et les méthodes permettant de les lire, les modifier et les enregistrer. Les données peuvent être brutes ou bien récupérées en base de données.
 La _vue_ représente l'affichage de l'interface graphique. Elle affiche les données récupérées depuis le modèle.
